@@ -1,0 +1,30 @@
+<p>cart works!</p>
+<input type="button" value="view" (click)="view()">
+    <input type="button" value="hide" (click)="hide()">
+<table border="2" *ngIf="View">
+    
+    <tr>
+            <td>NAME:</td>
+            <td>PRICE:</td>
+            <td>COMPANY</td>
+    </tr>
+    <tr *ngFor="let p of Products">
+        <td>{{p.name}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.company}}</td>
+        <input type="button" value="add" (click)="Add(p)">
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <td>NAME:</td>
+        <td>PRICE:</td>
+        <td>COMPANY:</td>
+    </tr>
+    <tr *ngFor="let c of Cart">
+            <td>{{c.name}}</td>
+            <td>{{c.price}}</td>
+            <td>{{c.company}}</td>
+            <input type="button" value="delete" (click)="delete()">
+        </tr>
+</table>

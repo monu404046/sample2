@@ -1,0 +1,29 @@
+<p>view works!</p>
+<h2>name of employe :{{Name}}</h2>
+<h2>Age :{{Age}}</h2>
+<h2>email id:{{Email}}</h2>
+<h2>Address:</h2>
+<h3>{{Address.houseno}},{{Address.street}}</h3>
+<!-- <ul><li *ngFor="let hb of Mobile">{{hb}}</li></ul> -->
+<!-- {{Mobile}} -->
+<table border="3">
+    <tr *ngFor="let hb of Mobile;let i = index"><td>{{i}}</td><td>{{hb}}</td></tr>
+</table>
+<input type="button" value="submmit" name="btn1" (click)="Add()"/>
+<div>
+
+        <table border="1" >
+                <tr>
+                    <td>project name</td>
+                    <td>duration</td>
+                    <td>end date</td>
+                </tr>
+                 
+                     <tr *ngFor="let p of Projects">
+                         <td>{{p.name}}</td>
+                         <td>{{p.duration}}</td>
+                         <td>{{p.enddate}}</td>
+                    </tr>
+                    
+            </table>
+</div>

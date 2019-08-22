@@ -1,0 +1,15 @@
+<table>
+<tr>
+        <td>NAME:</td>
+        <td><input type="text" name="uname" [(ngModel)]="cust"></td>
+</tr>
+<tr>
+    <input type="button" value="SHOW MESSAGE" (click)="view()" >
+</tr>
+
+
+
+</table>
+<table *ngIf="View">
+    <tr><td>WELCOME:{{cust}}</td></tr>
+</table>
